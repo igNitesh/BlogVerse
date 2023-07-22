@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block content%}
+
+<div class="col">
+  <!-- Quote Section -->
+  <div class="row bg-body-tertiary bg-dark">
+    <div class="col-md-6">
+      <div class="h-100 p-5 rounded-3">
+        <h1>Stay curious.</h1>
+        <p>
+          "The more that you read, the more things you will know. The more that
+          you learn, the more places you'll go."
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% comment %} blogs {% endcomment %}
+        {% for post in posts %}
+        <div class="col-md-10 mx-auto border md-3" >
+            <div class="h-100 p-5 text-bg-dark rounded-3">
+                <h2 clas="fw-bold">{{post.title}}</h2>
+                <p>
+                    {{post.content}}
+                </p>
+                <!-- <button class="btn btn-outline-light" type="button">
+                Example button
+                </button> -->
+            </div>
+        </div>
+        {% endfor %}
+</div>
+
+{% endblock content%}
